@@ -6,12 +6,41 @@
     <title>Color switcher</title>
     <link rel="stylesheet" href="css/common.css" />
   </head>
-  <body>
+  <style>
+    body {
+      transition: background-color 0.3s ease;
+    }
+
+    .container {
+      max-width: 300px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <p><a href="index.html">Go back</a></p>
 
-    <button type="button" data-start>Start</button>
-    <button type="button" data-stop>Stop</button>
+    <button class="button" type="button" data-start>Start</button>
+    <button class="button" type="button" data-stop>Stop</button>
+  </div>
 
-    <script src="js/01-color-switcher.js" type="module"></script>
-  </body>
+  <script src="js/01-color-switcher.js" type="module"></script>
+</body>
 </html>
