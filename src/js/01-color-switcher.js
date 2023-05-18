@@ -1,21 +1,19 @@
-// Отримуємо посилання на кнопки "Start" і "Stop"
 const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
 
-let intervalId; // Оголошуємо змінну на глобальному рівні
+let intervalId;
 
-// Додаємо обробники подій для кнопок
 startButton.addEventListener('click', startColorSwitch);
 stopButton.addEventListener('click', stopColorSwitch);
 
 function startColorSwitch() {
-  startButton.disabled = true; // Вимикаємо кнопку "Start"
-  intervalId = setInterval(changeBackgroundColor, 1000); // Запускаємо зміну кольору кожну секунду
+  startButton.disabled = true;
+  intervalId = setInterval(changeBackgroundColor, 1000);
 }
 
 function stopColorSwitch() {
-  startButton.disabled = false; // Активуємо кнопку "Start"
-  clearInterval(intervalId); // Зупиняємо зміну кольору
+  startButton.disabled = false;
+  clearInterval(intervalId);
 }
 
 function changeBackgroundColor() {
