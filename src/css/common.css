@@ -38,3 +38,26 @@ img {
       opacity: 0.5;
       cursor: not-allowed;
     }
+
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .field {
+      text-align: center;
+    }
+    
+    .value {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    
+    .label {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
